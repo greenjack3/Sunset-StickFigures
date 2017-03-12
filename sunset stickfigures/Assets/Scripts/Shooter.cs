@@ -4,23 +4,21 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour {
 
-	float debugTimer = 0.2f;
-	float timeLeft;
-
 	public Gun gun;
 
 	void Start () 
 	{
-		timeLeft = debugTimer;
+		
 	}
 	
 	void Update () 
 	{
-		if (timeLeft <= 0)
+        float fire1 = Input.GetAxis("Fire1");
+        float fire2 = Input.GetAxis("Fire2");
+
+        if (fire1 > 0.7f || fire2 > 0.7f)
 		{
 			gun.Shoot();
-			timeLeft = debugTimer;
 		}
-		timeLeft -= Time.deltaTime;
 	}
 }

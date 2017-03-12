@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{CAF24397-5BBD-32B5-42DD-C520C84E4676}") = "sunset stickfigures", "Assembly-CSharp.csproj", "{69B47E4E-31AE-A7B9-B069-729FB4D2B3FA}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sunset stickfigures", "sunset stickfigures.csproj", "{BB5D7928-C60C-5468-C994-E2AC6C30A129}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{69B47E4E-31AE-A7B9-B069-729FB4D2B3FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69B47E4E-31AE-A7B9-B069-729FB4D2B3FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69B47E4E-31AE-A7B9-B069-729FB4D2B3FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69B47E4E-31AE-A7B9-B069-729FB4D2B3FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5D7928-C60C-5468-C994-E2AC6C30A129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5D7928-C60C-5468-C994-E2AC6C30A129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5D7928-C60C-5468-C994-E2AC6C30A129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5D7928-C60C-5468-C994-E2AC6C30A129}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
