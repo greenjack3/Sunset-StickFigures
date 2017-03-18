@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour {
 
-	//staty to-do
+    public float speed;
+    public float lifeTime;
+    public int damage;
 
 	void Update () 
 	{
-		transform.Translate (Vector3.right * Time.deltaTime);
+		transform.Translate (speed * Vector3.right * Time.deltaTime);
+        lifeTime -= Time.deltaTime;
+
+        if (lifeTime <= 0)
+            Destroy(gameObject);
 	}
 }

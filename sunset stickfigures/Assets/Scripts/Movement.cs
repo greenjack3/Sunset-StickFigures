@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
+    public float speed;
     bool isCrouching;
     Quaternion direction;
     public GameObject legs;
+
+    void Start()
+    {
+       
+    } 
 
     void Update()
     {
@@ -20,10 +25,12 @@ public class Movement : MonoBehaviour
             isCrouching = false;
 
         if (horizontal < 0)
-            direction = Quaternion.Euler(0, 180, 0);
-        if (horizontal > 0)
             direction = Quaternion.Euler(0, 0, 0);
+        if (horizontal > 0)
+            direction = Quaternion.Euler(0, 180, 0);
 
         legs.transform.rotation = direction;
+
+        transform.Translate(new Vector3(speed * horizontal * Time.deltaTime, 0, 0));
     }
 }
