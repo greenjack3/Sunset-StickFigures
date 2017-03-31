@@ -22,25 +22,7 @@ public class RotateArm : MonoBehaviour {
 
         float horizontal = Input.GetAxis("Horizontal_right");
         float vertical = Input.GetAxis("Vertical_right");
-
-        if (horizontal < 0)
-        {
-            direction = Quaternion.Euler(0, 0, -90);
-            offset = 180;
-        }
-        if (horizontal > 0)
-        {
-            direction = Quaternion.Euler(0, 180, -90);
-            offset = 0;
-        }
-
-        head.transform.rotation = direction;
-
-        for (int i = 0; i < guns.Length; i++)
-        {
-            guns[i].transform.rotation = Quaternion.Euler (offset, guns[i].transform.rotation.eulerAngles.y, guns[i].transform.rotation.eulerAngles.z);
-        }
-
+                        
         if (horizontal != 0 || vertical != 0)
         {
             float angle = Mathf.Atan2(vertical, horizontal) * Mathf.Rad2Deg;
@@ -48,6 +30,20 @@ public class RotateArm : MonoBehaviour {
                 switchingAngle = angle;
         }
 
-        transform.rotation = Quaternion.Euler(0, 0, switchingAngle);
+        if (horizontal < 0)
+        {
+            direction = Quaternion.Euler(0, 0, -90);
+            offset = 180;
+            switchingAngle = -switchingAngle;
+        }
+        if (horizontal >= 0)
+        {
+            direction = Quaternion.Euler(0, 180, -90);
+            offset = 0;
+        }
+
+        head.transform.rotation = direction;
+
+        transform.rotation = Quaternion.Euler(0, offset, switchingAngle+offset);
     }
 }
