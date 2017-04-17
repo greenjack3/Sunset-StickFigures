@@ -17,6 +17,7 @@ public class EnemyShoot : MonoBehaviour {
     bool isShooting;
 
     bool continuePattern;
+    public GameObject spawner;
 
     void OnEnable()
     {
@@ -24,7 +25,7 @@ public class EnemyShoot : MonoBehaviour {
 
         count = 0;
         isShooting = false;
-
+        patternTimer = shootingPattern[0];
     }
 
     void Update()
@@ -63,6 +64,14 @@ public class EnemyShoot : MonoBehaviour {
         if (isShooting)
         {
             gun.Shoot();
+            isShooting = false;
         }
+
+        
+    }
+
+    public void OnDestroy()
+    {
+        spawner.SendMessage("Spwaning");
     }
 }

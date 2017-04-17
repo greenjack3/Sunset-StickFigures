@@ -7,7 +7,7 @@ public class EnemyBehaviorMaster : MonoBehaviour
 
     public EnemyAim aim;
     public EnemyShoot shoot;
-
+    public Animator anim;
     public float[] hidingPattern;
 
     float patternTimer;
@@ -38,5 +38,7 @@ public class EnemyBehaviorMaster : MonoBehaviour
         patternTimer -= Time.deltaTime;
         aim.enabled = !hidden;
         shoot.enabled = !hidden;
+
+        anim.SetBool("Crouch", hidden);
     }
 }

@@ -25,6 +25,6 @@ public class Shooter : MonoBehaviour {
         if (Input.GetButtonDown("Swap"))
             gun.Swap();
 
-        Debug.Log("Fire1: " + fire1 + "Fire2: " + fire2 + "Fire3: " + fire3);
+        //Debug.Log("Fire1: " + fire1 + "Fire2: " + fire2 + "Fire3: " + fire3);
 	}
 }

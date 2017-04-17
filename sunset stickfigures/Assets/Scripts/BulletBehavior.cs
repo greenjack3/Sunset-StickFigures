@@ -8,6 +8,8 @@ public class BulletBehavior : MonoBehaviour {
     public float lifeTime;
     public int damage;
 
+    public bool playersBullet;
+
 	void Update () 
 	{
 		transform.Translate (speed * Vector3.right * Time.deltaTime);

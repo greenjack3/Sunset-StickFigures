@@ -22,8 +22,7 @@ public class EnemyAim : MonoBehaviour {
 
         count = 0;
         isAiming = false;
-        	
-	}
+    }
 	
 	void Update ()
     {
