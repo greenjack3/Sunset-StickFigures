@@ -70,8 +70,5 @@ public class EnemyShoot : MonoBehaviour {
         
     }
 
-    public void OnDestroy()
-    {
-        spawner.SendMessage("Spwaning");
-    }
+    
 }

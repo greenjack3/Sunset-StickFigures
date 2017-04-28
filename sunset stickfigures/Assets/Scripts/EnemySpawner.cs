@@ -25,14 +25,16 @@ public class EnemySpawner : MonoBehaviour {
     {
         if(startTimer == true)
         {
+           // Timer = Random.Range(minT, maxT);
             Timer -= Time.deltaTime;
         }
 		if(Timer <= 0)
         {
             GameObject enem = enemy[Random.Range(0, enemy.Length)];
-            GameObject instance = Instantiate(enem, gameObject.transform.position, gameObject.transform.rotation);
+            GameObject e = Instantiate(enem, gameObject.transform.position, gameObject.transform.rotation);
+            e.transform.parent = gameObject.transform;
+           startTimer = false;
             Timer = Random.Range(minT, maxT);
-            startTimer = false;
         }
 	}
 

@@ -9,7 +9,7 @@ public class EnemyBehaviorMaster : MonoBehaviour
     public EnemyShoot shoot;
     public Animator anim;
     public float[] hidingPattern;
-
+  
     float patternTimer;
     int count;
     bool hidden;
@@ -18,6 +18,7 @@ public class EnemyBehaviorMaster : MonoBehaviour
     {
         hidden = true;
         count = 0;
+        
     }
 
 
@@ -40,5 +41,12 @@ public class EnemyBehaviorMaster : MonoBehaviour
         shoot.enabled = !hidden;
 
         anim.SetBool("Crouch", hidden);
+
+      
+    }
+
+    public void OnDestroy()
+    {
+        SendMessageUpwards("Spawning");
     }
 }

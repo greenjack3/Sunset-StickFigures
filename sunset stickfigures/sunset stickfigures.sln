@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sunset stickfigures.Plugins", "sunset stickfigures.Plugins.csproj", "{BAE3289C-C487-FAF2-E3EF-98B6D4946930}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sunset stickfigures", "sunset stickfigures.csproj", "{BB5D7928-C60C-5468-C994-E2AC6C30A129}"
