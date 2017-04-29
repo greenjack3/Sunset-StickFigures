@@ -47,6 +47,6 @@ public class EnemyBehaviorMaster : MonoBehaviour
 
     public void OnDestroy()
     {
-        SendMessageUpwards("Spawning");
+       // SendMessageUpwards("Spawning");
     }
 }

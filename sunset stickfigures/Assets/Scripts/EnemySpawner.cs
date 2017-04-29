@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour {
     public float maxT;
     public bool startTimer = false;
     public GameObject[] enemy;
-
+    public GameObject spawnedEnemy;
 
 	void Start ()
     {
@@ -32,9 +32,14 @@ public class EnemySpawner : MonoBehaviour {
         {
             GameObject enem = enemy[Random.Range(0, enemy.Length)];
             GameObject e = Instantiate(enem, gameObject.transform.position, gameObject.transform.rotation);
-            e.transform.parent = gameObject.transform;
+            spawnedEnemy = e;
            startTimer = false;
             Timer = Random.Range(minT, maxT);
+        }
+
+        if(startTimer==false && spawnedEnemy == null)
+        {
+            Spwaning();
         }
 	}
 
